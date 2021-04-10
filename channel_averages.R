@@ -16,15 +16,18 @@ channel_averages <- function(path_img, alpha = 0.4, probs = 0.75, ...) {
     ),
     c("r", "g", "b"))
     
-    rgb(red = vec_rgb["r"], green = vec_rgb["g"], blue = vec_rgb["b"], alpha = alpha)
-    
+    rgb(
+      red = vec_rgb["r"],
+      green = vec_rgb["g"],
+      blue = vec_rgb["b"],
+      alpha = alpha
+    )
   }
-  
 }
 
 # .book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active > a { color: #000000; background: 0 0; text-decoration: none; background-color: #FFAF24; }
 #     
 # .book .book-summary ul.summary li a:hover { background-color: #aaaaaa; color: #000000; }
       
-color <- channel_averages(path_img = "/home/prdm0/Downloads/VibrantColorR/capa.png")
+color <- channel_averages(path_img = "/home/prdm0/Downloads/VibrantColorR/logo.png")
 pie(1, col = color, labels = NA)
